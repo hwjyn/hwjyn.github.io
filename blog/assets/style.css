@@ -196,11 +196,6 @@ main { margin-top: 34px; }
 .book-notes > :last-child { margin-bottom: 0; }
 .site-footer { margin-top: auto; padding-top: 40px; text-align: center; color: #6c7077; line-height: 1.5; }
 .site-footer small { font-size: 11px; }
-.feed-subscribe { margin: 8px 0 0; }
-.rss-link, .rss-link:hover { color: inherit; }
-.rss-link { display: inline-flex; align-items: center; gap: 6px; min-height: 32px; padding: 4px; font-size: 12px; }
-.rss-link:hover { text-decoration: underline; }
-.rss-icon { display: block; flex: none; }
 .layout-switch { display: none; justify-content: center; margin-top: 20px; }
 .layout-switch[hidden] { display: none; }
 .layout-switch button { min-width: 96px; min-height: 44px; padding: 10px 20px; border: 1px solid var(--rule-color); border-radius: 0; background: var(--switch-bg); color: var(--muted-color); font-family: system-ui, sans-serif; font-size: 12px; line-height: 1.5; cursor: pointer; }
@@ -211,11 +206,10 @@ main { margin-top: 34px; }
 .skip-link:focus { transform: none; }
 @media screen and (max-width: 600px) {
   .layout-switch { display: flex; }
-  .rss-link { min-height: 44px; }
 }
 @media print {
   .site { display: block; min-height: 0; width: 100%; padding: 0; }
-  .main-nav, .post-navigation, .layout-switch, .skip-link, .feed-subscribe { display: none; }
+  .main-nav, .post-navigation, .layout-switch, .skip-link { display: none; }
   a { color: inherit; }
   .post-body s, .post-body del { background: none; text-decoration: line-through; text-decoration-thickness: 1px; }
 }
