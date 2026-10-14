@@ -31,6 +31,34 @@
   font-display: swap;
 }
 
+/* Small name font keeps the masthead fast; full Hangul fallbacks follow. */
+@font-face {
+  font-family: "Blog Name Korean";
+  src: url("fonts/NotoSerifKR-Name.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+C7AC, U+D604, U+D669;
+}
+
+/* Explicit Korean fallback, independent of locally installed system fonts. */
+@font-face {
+  font-family: "Noto Serif KR";
+  src: url("fonts/NotoSerifKR-Korean-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+1100-11FF, U+302E-302F, U+3130-318F, U+A960-A97F, U+AC00-D7A3, U+D7B0-D7FF, U+FFA0-FFDC;
+}
+@font-face {
+  font-family: "Noto Serif KR";
+  src: url("fonts/NotoSerifKR-Korean-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+1100-11FF, U+302E-302F, U+3130-318F, U+A960-A97F, U+AC00-D7A3, U+D7B0-D7FF, U+FFA0-FFDC;
+}
+
 * { box-sizing: border-box; }
 html {
   --page-bg: #ffffff;
@@ -48,7 +76,7 @@ body {
   margin: 0;
   background: var(--page-bg);
   color: var(--text-color);
-  font-family: "Palatino Nova", Palatino, "Palatino Linotype", "Book Antiqua", "Times New Roman", serif;
+  font-family: "Palatino Nova", "Noto Serif KR", Palatino, "Palatino Linotype", "Book Antiqua", "Times New Roman", serif;
 }
 a { color: #39805b; text-decoration: none; text-decoration-thickness: 1px; text-underline-offset: 2px; }
 a:hover { color: #286344; }
@@ -72,7 +100,7 @@ a:focus-visible { outline: 2px solid #39805b; outline-offset: 4px; }
   letter-spacing: .015em;
   word-spacing: .18em;
 }
-.site-title a { color: inherit; }
+.site-title a { color: inherit; font-family: "Blog Name Korean", "Noto Serif KR", "Palatino Nova", Palatino, serif; }
 .site-title-word { color: #777166; }
 .main-nav {
   padding: 4px 0;

@@ -21,7 +21,7 @@ a:focus-visible { outline-color: #91cbaa; }
   color: var(--text-color);
   margin: 0;
   text-align: left;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: "Noto Serif KR", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-size: 22px;
   line-height: 1.35;
   font-weight: 400;
@@ -36,7 +36,7 @@ a:focus-visible { outline-color: #91cbaa; }
   border-top: 0;
   border-bottom: 1px solid var(--rule-color);
   text-align: left;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: "Noto Serif KR", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-size: 13px;
 }
 .main-nav ul { justify-content: flex-start; flex-wrap: wrap; gap: 24px; }
@@ -56,7 +56,7 @@ main { margin-top: 32px; }
 .post-date::before, .post-date::after { display: none; }
 .post-title, .page-title {
   text-align: left;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: "Noto Serif KR", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-size: 26px;
   line-height: 1.25;
   font-weight: 600;
@@ -68,13 +68,13 @@ main { margin-top: 32px; }
   color: var(--muted-color);
   margin-top: 12px;
   text-align: left;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: "Noto Serif KR", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-size: 12px;
   font-style: normal;
   line-height: 1.6;
 }
 .post-body { margin-top: 20px; font-size: 18px; line-height: 1.75; }
-.post-body .read-more { font-family: system-ui, sans-serif; font-size: 13px; }
+.post-body .read-more { font-family: "Noto Serif KR", system-ui, sans-serif; font-size: 13px; }
 .post-body .read-more a { display: inline-flex; align-items: center; min-height: 44px; }
 .post-body blockquote { margin-inline: 0; padding-left: 16px; color: #c2c8c4; border-color: var(--rule-color); }
 .post-body th, .post-body td { border-color: var(--rule-color); }
@@ -82,12 +82,12 @@ main { margin-top: 32px; }
 .archive-list li { flex-direction: column; gap: 6px; padding: 16px 0; }
 .archive-list li { border-color: var(--rule-color); }
 .archive-list a { font-size: 18px; line-height: 1.5; }
-.archive-list time { color: var(--muted-color); font-family: system-ui, sans-serif; font-size: 12px; line-height: 1.5; }
-.post-navigation { margin-top: 36px; padding-top: 16px; border-top: 1px solid var(--rule-color); font-family: system-ui, sans-serif; font-size: 14px; }
+.archive-list time { color: var(--muted-color); font-family: "Noto Serif KR", system-ui, sans-serif; font-size: 12px; line-height: 1.5; }
+.post-navigation { margin-top: 36px; padding-top: 16px; border-top: 1px solid var(--rule-color); font-family: "Noto Serif KR", system-ui, sans-serif; font-size: 14px; }
 .post-navigation a { display: inline-flex; align-items: center; min-height: 44px; }
 .books-body ul, .books-body ol { padding-left: 18px; }
 .book-details > summary { padding-block: 8px; }
 .book-details > summary::marker { color: #91cbaa; }
 .book-details > summary:focus-visible { outline-color: #91cbaa; }
 .book-notes { color: #c2c8c4; font-size: 16px; line-height: 1.7; }
-.site-footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--rule-color); color: var(--muted-color); text-align: left; font-family: system-ui, sans-serif; }
+.site-footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--rule-color); color: var(--muted-color); text-align: left; font-family: "Noto Serif KR", system-ui, sans-serif; }
