@@ -1,20 +1,9 @@
-/* Dark reader layout: automatic on small screens, or selected with Mobile. */
-html {
-  --page-bg: #17191b;
-  --nav-bg: #17191b;
-  --rule-color: #373b3e;
-  --code-bg: #23272a;
-  --text-color: #e7e9e5;
-  --muted-color: #a3aaa8;
-  --switch-bg: #1c1f21;
-  --switch-active-bg: #33463a;
-  color-scheme: dark;
-}
-a { color: #91cbaa; }
-a:hover { color: #b6dfc6; }
-a:focus-visible { outline-color: #91cbaa; }
+/* Reader layout. Colors follow the system theme or the reader's choice. */
+a { color: var(--link-color); }
+a:hover { color: var(--link-hover-color); }
+a:focus-visible { outline-color: var(--accent-color); }
 .site {
-  width: min(540px, calc(100% - 48px));
+  width: min(680px, calc(100% - 36px));
   padding: 24px 0 20px;
 }
 .site-title {
@@ -22,7 +11,7 @@ a:focus-visible { outline-color: #91cbaa; }
   margin: 0;
   text-align: left;
   font-family: "Noto Serif KR", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  font-size: 22px;
+  font-size: 26px;
   line-height: 1.35;
   font-weight: 400;
   letter-spacing: 0;
@@ -30,64 +19,65 @@ a:focus-visible { outline-color: #91cbaa; }
 }
 .site-title-word { color: var(--muted-color); }
 .main-nav {
-  margin-top: 12px;
+  margin-top: 24px;
   padding: 0;
   background: transparent;
-  border-top: 0;
-  border-bottom: 1px solid var(--rule-color);
+  border: 0;
   text-align: left;
-  font-family: "Noto Serif KR", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  font-size: 13px;
+  font-family: var(--interface-font);
+  font-size: 12px;
 }
-.main-nav ul { justify-content: flex-start; flex-wrap: wrap; gap: 24px; }
-.main-nav a { display: inline-flex; align-items: center; min-height: 44px; color: #91cbaa; }
-.main-nav a:hover { color: #b6dfc6; }
+.main-nav ul { justify-content: flex-start; flex-wrap: wrap; gap: 12px 18px; }
+.main-nav a { display: inline-flex; align-items: center; min-height: 44px; color: var(--text-color); }
+.main-nav a:hover { color: var(--text-color); }
 .main-nav a[aria-current="page"] { text-decoration: underline; }
 main { margin-top: 32px; }
 .post + .post { margin-top: 36px; padding-top: 36px; border-top: 1px solid var(--rule-color); }
 .post-date {
-  color: var(--muted-color);
+  color: var(--accent-color);
   display: block;
   margin: 0 0 10px;
   text-align: left;
   font-size: 12px;
-  letter-spacing: 0;
+  letter-spacing: .1em;
 }
 .post-date::before, .post-date::after { display: none; }
 .post-title, .page-title {
   text-align: left;
-  font-family: "Noto Serif KR", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  font-size: 26px;
+  font-family: "Libre Caslon Display", "Noto Serif KR", Georgia, serif;
+  font-size: 30px;
   line-height: 1.25;
-  font-weight: 600;
-  letter-spacing: -.02em;
+  font-weight: 400;
+  letter-spacing: 0;
   overflow-wrap: anywhere;
 }
-.post-full .post-title { font-size: 30px; }
+.post-full .post-date { margin-bottom: 18px; text-align: center; }
+.post-full .post-title { font-size: 36px; text-align: center; }
 .post-byline {
-  color: var(--muted-color);
-  margin-top: 12px;
-  text-align: left;
+  color: var(--accent-color);
+  margin-top: 20px;
+  text-align: center;
   font-family: "Noto Serif KR", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-size: 12px;
   font-style: normal;
   line-height: 1.6;
 }
-.post-body { margin-top: 20px; font-size: 18px; line-height: 1.75; }
-.post-body .read-more { font-family: "Noto Serif KR", system-ui, sans-serif; font-size: 13px; }
+.post-body { margin-top: 20px; font-size: 19px; line-height: 1.7; }
+.post-full .post-body { margin-top: 34px; }
+.post-body .read-more { font-family: var(--interface-font); font-size: 13px; }
 .post-body .read-more a { display: inline-flex; align-items: center; min-height: 44px; }
-.post-body blockquote { margin-inline: 0; padding-left: 16px; color: #c2c8c4; border-color: var(--rule-color); }
+.post-body blockquote { margin-inline: 0; padding-left: 16px; color: var(--muted-color); border-color: var(--rule-color); }
 .post-body th, .post-body td { border-color: var(--rule-color); }
 .post-body hr { border-color: var(--rule-color); }
 .archive-list li { flex-direction: column; gap: 6px; padding: 16px 0; }
 .archive-list li { border-color: var(--rule-color); }
 .archive-list a { font-size: 18px; line-height: 1.5; }
-.archive-list time { color: var(--muted-color); font-family: "Noto Serif KR", system-ui, sans-serif; font-size: 12px; line-height: 1.5; }
+.archive-list time { color: var(--accent-color); font-family: "Newsreader", "Noto Serif KR", Georgia, serif; font-size: 14px; line-height: 1.5; }
 .post-navigation { margin-top: 36px; padding-top: 16px; border-top: 1px solid var(--rule-color); font-family: "Noto Serif KR", system-ui, sans-serif; font-size: 14px; }
 .post-navigation a { display: inline-flex; align-items: center; min-height: 44px; }
 .books-body ul, .books-body ol { padding-left: 18px; }
 .book-details > summary { padding-block: 8px; }
-.book-details > summary::marker { color: #91cbaa; }
-.book-details > summary:focus-visible { outline-color: #91cbaa; }
-.book-notes { color: #c2c8c4; font-size: 16px; line-height: 1.7; }
-.site-footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--rule-color); color: var(--muted-color); text-align: left; font-family: "Noto Serif KR", system-ui, sans-serif; }
+.book-details > summary::marker { color: var(--link-color); }
+.book-details > summary:focus-visible { outline-color: var(--accent-color); }
+.book-notes { color: var(--muted-color); font-size: 16px; line-height: 1.7; }
+.site-footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--rule-color); color: var(--muted-color); text-align: left; font-family: "Newsreader", "Noto Serif KR", Georgia, serif; }
