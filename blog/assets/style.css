@@ -190,9 +190,11 @@ a:focus-visible { outline: 2px solid var(--accent-color); outline-offset: 4px; }
 }
 .site-title a { color: inherit; font-family: "Blog Name Korean", "Noto Serif KR", "Palatino Nova", Palatino, serif; }
 .site-title-word { color: var(--muted-color); }
+.site-header { position: relative; padding-bottom: 16px; }
+.site-header::after { content: ""; position: absolute; bottom: 0; left: 50%; width: min(1100px, calc(100vw - 48px)); border-top: 1px solid var(--rule-color); transform: translateX(-50%); pointer-events: none; }
 .main-nav {
   padding: 4px 0;
-  background: var(--nav-bg);
+  background: transparent;
   border: 0;
   text-align: center;
   font-family: var(--interface-font);
@@ -320,6 +322,7 @@ main { margin-top: 34px; }
 @media print {
   .site { display: block; min-height: 0; width: 100%; padding: 0; }
   .main-nav, .post-navigation, .layout-switch, .skip-link, .theme-toggle { display: none; }
+  .site-header::after { display: none; }
   a { color: inherit; }
   .post-body s, .post-body del { background: none; text-decoration: line-through; text-decoration-thickness: 1px; }
 }

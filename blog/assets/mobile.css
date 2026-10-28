@@ -18,6 +18,8 @@ a:focus-visible { outline-color: var(--accent-color); }
   word-spacing: .12em;
 }
 .site-title-word { color: var(--muted-color); }
+.site-header { padding-bottom: 8px; }
+.site-header::after { width: calc(100vw - 36px); }
 .main-nav {
   margin-top: 24px;
   padding: 0;
