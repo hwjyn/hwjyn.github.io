@@ -43,7 +43,6 @@ main { margin-top: 32px; }
   font-size: 12px;
   letter-spacing: .1em;
 }
-.post-date::before, .post-date::after { display: none; }
 .post-title, .page-title {
   text-align: left;
   font-family: "Libre Caslon Display", "Noto Serif KR", Georgia, serif;
