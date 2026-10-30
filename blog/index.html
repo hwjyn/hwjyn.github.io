@@ -5,12 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex">
   <title>Blog | 황재현</title>
-  <link rel="preload" href="assets/fonts/NotoSerifKR-Name.woff2" as="font" type="font/woff2" crossorigin>
   <script src="assets/theme.js"></script>
   <link rel="alternate" type="application/rss+xml" title="the 황재현 blog." href="feed.xml">
   <link rel="stylesheet" href="assets/katex/katex.min.css">
   <link rel="stylesheet" href="assets/style.css">
   <link id="mobile-theme" rel="stylesheet" href="assets/mobile.css" media="screen and (max-width: 600px)">
+  <style>
+    /* The three-character name font travels with the page, without a font request. */
+    @font-face {
+      font-family: "Blog Masthead Korean";
+      src: url("data:font/woff2;base64,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") format("woff2");
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+      unicode-range: U+C7AC, U+D604, U+D669;
+    }
+    .site-title a { font-family: "Blog Masthead Korean", "Noto Serif KR", "Palatino Nova", Palatino, serif; }
+  </style>
   <script src="assets/layout.js"></script>
 </head>
 <body>
